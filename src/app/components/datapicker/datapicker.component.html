@@ -1,0 +1,29 @@
+<!-- <mat-form-field appearance="fill">
+  <mat-label>Years</mat-label>
+  <mat-select [formControl]="years" multiple>
+    <mat-select-trigger>
+      {{years.value ? years.value[0] : ''}}
+      <span *ngIf="years.value?.length > 1" class="example-additional-selection">
+        (+{{years.value.length - 1}} {{years.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let years of yearsList" [value]="years">{{years}}</mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+
+<mat-form-field appearance="fill">
+  <mat-label>Years</mat-label>
+  
+  <mat-select [formControl]="years" multiple>
+    <mat-select-trigger>
+      {{years.value ? years.value[0] : ''}}
+      <span *ngIf="years.value?.length > 1" class="years-selected">
+        (+{{years.value.length - 1}} {{years.value?.length === 2 ? 'other' : 'others'}})
+      </span>
+    </mat-select-trigger>
+    <mat-option *ngFor="let years of yearsList" [value]="years">{{years}}</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<p>PS: Графики не подключены к селектору</p>

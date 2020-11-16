@@ -1,0 +1,26 @@
+<div class="grid-container">
+  <cd-datapicker></cd-datapicker>
+  <mat-grid-list cols="{{ ( cardLayout | async )?.columns }}" rowHeight="200px">
+    <!--Charts-->
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <cd-card title="Monthly Revenue">
+        <cd-chart chartType="bar"></cd-chart>
+      </cd-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <cd-card title="Product Sales">
+        <cd-chart chartType="bar"></cd-chart>
+      </cd-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <cd-card title="Sales by Traffic Source">
+        <cd-chart chartType="line"></cd-chart>
+      </cd-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="( cardLayout | async )?.chart.cols" [rowspan]="( cardLayout | async )?.chart.rows">
+      <cd-card title="Online Store Sessions by Traffic Source">
+        <cd-chart chartType="line"></cd-chart>
+      </cd-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
